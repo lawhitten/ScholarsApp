@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>The Scholar's App</title>
+    </head>
+    <body>
+
+        <h1 class = "text-center">{{ title }}</h1>
+        <div class = "container">
+            <div class = "form-group"> 
+                <form method = "POST" action = "/signIn">
+            <label for = "username">Username: </label>
+            <input type = "text" name = "username" class = "form-control" placeholder = "YouCantSeeMe">
+            <br>
+            <label for = "password">Password: </label>
+            <input type = "password" class = "form-control" name = "password">
+            <br>
+            <button type = "submit" name = "submit">Sign In</button>
+        </form>
+            </div>
+        
+    </div>
+    </body>
+</html>

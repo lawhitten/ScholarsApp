@@ -1,0 +1,38 @@
+{{> header }}
+        
+    <div class = "container-fluid">
+      <br>
+    <h2>{{ name }}&emsp;Status: {{ status }}</h2>
+    <br>
+    <h3>Contact: {{ email }}</h3>
+    <h4>Players' stats:</h4>
+    </div>
+    
+
+    <div class = "container-fluid row justify-content-center">
+        <table class = "table" border = "1">
+            <thead class = "thead-dark">
+                <tr>
+                    <th scope = "col">Player's Name</td>
+                    <th scope = "col">Best</td>
+                    <th scope = "col">Worst</td>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each scores}}
+                <tr>
+                    <td>{{this.name}}</td>
+                    <td>{{this.best}}</td>
+                    <td>{{this.worst}}</td>
+                    
+                     {{/each}}
+                      
+                    
+                  
+                </tr>
+               
+            </tbody>
+        </table>
+    </div>
+    </body>
+</html>

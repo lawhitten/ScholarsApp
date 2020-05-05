@@ -1,0 +1,35 @@
+{{> headerP }}
+        
+   
+    <br>
+    <div class = "container-fluid">
+        <h2 class = "h2">{{ name }}&emsp;Status: {{ status }}</h2>
+        <br>
+        <h3>Contact: {{ email }}</h3>
+        <h4>Stats: </h4>
+    </div>
+   
+    <div class = "container-fluid row justify-content-center">
+       <table class = "table" border = "1">
+            <thead class = "thead-dark">
+                <tr>
+                    <th scope = "col">Genre</td>
+                    <th scope = "col">Difficulty</td>
+                    <th scope = "col">Score</td>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each scores}}
+                   
+                    <tr>
+                        <td>{{this.genre}}</td>
+                        <td>{{this.difficulty}}</td>
+                        <td>{{this.score}}</td>
+                    </tr>
+                      
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+    </body>
+</html>

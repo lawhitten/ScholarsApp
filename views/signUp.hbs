@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>The Scholar's App</title>
+    </head>
+    <body>
+        <h1 class = "text-center">Sign Up</h1>
+        <div class = "container">
+        <div class ="form-group">
+        <form method = "POST" action = "index">
+            <label for = "name">Display Name:</label>
+            <input type = "text" name = "name" id = "name-signUp" class = "form-control" placeholder = "John Cena">
+            <br>
+            <label for = "email">Email Address:</label>
+            <input type = "email" name ="email" id = "email-signUp" class = "form-control" placeholder = "jc@wrestle.com">
+            <br>
+            <label for = "username">Username:</label>
+            <input type = "text" name = "username" id = "username-signUp" class = "form-control" placeholder = "YouCantSeeMe">
+            <br>
+            <label for = "password">Password:</label>
+            <input type = "password" name = "password" id = "password-signUp" class = "form-control">
+            <br>
+            <label for = "confirm">Confirm Password:</label>
+            <input type = "password" name = "confirm" class = "form-control">
+            <br>
+            <label for = "role">Type of account (p for player; c for coach):</label>
+            
+            <select name = "role">
+                <option value = "p">p</option>
+                <option value = "c">c</option>
+            </select>
+            <br>
+
+            <button id = "signUp_submit" type = "submit" name = "submit">Sign Up</button>
+        </form>
+        </div>
+        </div>
+       
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel = "stylesheet" href = "../css/styles.css">
+        <title>The Scholar's App</title>
+    </head>
+    <body class = "quizBG">
+        <div class = "p-3 mb-2 bg-dark text-white">
+        <h1 class = "h1 text-center">Quiz</h1>
+        </div>
+        <br>
+        <!--{{question.[0]}}-->
+        <br>
+        <div class = "container-fluid text-center border border-dark rounded w-75 p-3" id = "quizBox">
+            <input type = "hidden" name = "ans" id = "ans" value = "{{answer}}">
+            <input type = "hidden" name = "ans" id = "gen" value = "{{genre}}">
+            <input type = "hidden" name = "ans" id = "diff" value = "{{difficulty}}">
+            <form method = "POST" action = "/quizNext">
+                {{genre}}&emsp;&emsp;{{difficulty}}<br>{{question}}
+                <br>
+                <label for = "answer">Answer: </label>
+                <input type = "text" id = 'playerAnswer' name = "answer">
+                <br>
+                <br>
+                <button id = "answer" type = "button">Answer</button>
+           
+                <p>{{ questNum }} of {{ quizTotal }}</p>
+            
+                <div class = "extra"></div>
+
+                <button class = "hidden"  name = "next" value = "next" id = "next" type = "submit" disabled>Next</button>
+            </form>
+        </div>
+
+        <script src = "../jscript/textAppear.js"></script>
+    </body>
+</html>

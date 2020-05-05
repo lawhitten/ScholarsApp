@@ -1,0 +1,37 @@
+{{> headerP }}
+    <div class = "container-fluid">
+
+   
+        <h1>Filter out questions: </h1>
+        <form method = "POST" action = "/quiz">
+              <label for = "genre">Genre</label>
+                <select name = "genre">
+                    <option></option>
+                    {{#each genre}}
+                    <option class = "text-center" value = "{{this.genre}}">{{this.genre}}</option>
+                    {{/each}}
+                </select>
+
+                <label for = "difficulty">Difficulty Level</label>
+                <select name = "difficulty">
+                    <option></option>
+                    {{#each difficulty}}
+                    <option value = "{{this.difficulty}}">{{this.difficulty}}</option>
+                    {{/each}}
+                </select>
+    </div>
+     <div class = "container-fluid">
+          <button name = "number" value = "five" type = "submit">Random 5</button>
+        <button name = "number" value = "ten" type = "submit">Random 10</button>
+        <button name = "number" value = "twenty" type = "submit">Random 20</button>
+     </div> 
+   
+       
+
+    </form>
+</div>
+    
+        
+
+    </body>
+</html>

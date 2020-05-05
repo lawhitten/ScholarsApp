@@ -1,0 +1,35 @@
+{{> header }}
+    <div class = "container-fluid">
+        <h1 class = "text-center ">Create a Question</h1>
+    </div>
+        <div class = "container-fluid text-center">
+            <form method = "POST" class ="form">
+
+                <label for = "genre">Genre:</label>
+                <select name = "genre">
+                    {{#each genre}}
+                    <option class = "text-center" value = "{{this.genre}}">{{this.genre}}</option>
+                    {{/each}}
+                </select>
+                &ensp;
+                <label for = "difficulty">Difficulty Level:</label>
+                <select name = "difficulty">
+                    {{#each difficulty}}
+                    <option value = "{{this.difficulty}}">{{this.difficulty}}</option>
+                    {{/each}}
+                </select>
+
+                <br>
+                <label for = "question">Enter your Question (NAQT format recommended):</label>
+                <br>
+                <textarea name = "question" rows = "5" cols="40"></textarea>
+                <br>
+                <label for = "answer">Enter your Answer:</label>
+                <input type = "text" name = "answer">
+                <br>
+                <button type = "submit" name = "submit">Submit</button>
+            </form> 
+        </div>
+
+    </body>
+</html>

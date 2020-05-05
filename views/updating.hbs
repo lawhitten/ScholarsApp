@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class = "no-js" lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        {{#each css}}
+        <link rel="stylesheet" href="../../css/{{css}}">
+        {{/each}}
+        <title>The Scholar's App</title>
+    </head>
+
+    <body>
+        <div class = "container-fluid">
+        <h1 class = "text-center">Update Question</h1>
+    </div>
+        <div class = "container-fluid text-center">
+            <form method = "POST" class ="form">
+                <input type = "hidden" name = "questID" value = "{{questID}}">
+                <label for = "genre">Genre:</label>
+                <select name = "genre">
+                   <option value = "{{genre}}">{{genre}}</option>
+                    
+                    {{#each genreList}}
+                        <option value = {{this.genre}}>{{this.genre}}</option>
+                    {{/each}}
+                </select>
+                &ensp;
+                <label for = "difficulty">Difficulty Level:</label>
+                <select name = "difficulty">
+                    
+                   <option value = "{{difficulty}}">{{difficulty}}</option>
+                    {{#each diffList}}
+                        <option value = "{{this.difficulty}}">{{this.difficulty}}</option>
+                    {{/each}}
+                </select>
+
+                <br>
+                <label for = "question">Enter your Question (NAQT format recommended):</label>
+                <br>
+                <textarea name = "question" rows = "5" cols="40">{{question}}</textarea>
+                <br>
+                <label for = "answer">Enter your Answer:</label>
+                <input type = "text" name = "answer" value = "{{answer}}">
+                <br>
+                <button type = "submit" name = "submit">Submit</button>
+            </form> 
+        </div>
+
+    </body>
+</html>
+   

@@ -1,0 +1,22 @@
+
+
+/*styling elments for hidden/visible buttons on quiz page*/
+#next{
+    visibility: hidden;
+}
+
+#answer{
+    visibility: visible;
+}
+
+/*colorings of pages*/
+#quizBox{
+    background-color: #F5F5DC;
+}
+
+#questionbox{
+    background-color: #F5F5DC;
+}
+.quizBG{
+    background-color: #e0c56e;
+}
